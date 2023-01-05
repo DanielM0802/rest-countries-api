@@ -2,12 +2,23 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './components/Layout'
 import Index from './pages/Index'
-
+import CountryDetail from './components/CountryDetail'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Index/>,
+    element: <Layout/>,
+    children: [
+      {
+        index: true,
+        element: <Index/>,
+      },
+      {
+        path: '/country/:countryId',
+        element: <CountryDetail/>,
+      },
+    ]
   }
 ])
 

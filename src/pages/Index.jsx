@@ -1,6 +1,13 @@
 function Index() {
   return (
-    <div>Index</div>
+    <>
+      <p>pais</p>
+      <p>pais</p>
+      <p>pais</p>
+      <p>pais</p>
+      <p>pais</p>
+
+    </>
   )
 }
 
